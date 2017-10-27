@@ -1,9 +1,12 @@
 import React, { Component } from 'react';
+import LoginForm from 'grommet/components/LoginForm';
 
 class Login extends Component {
   render() {
     return (
-      <h1>Login Page</h1>
+      <LoginForm onSubmit={function(submit) {console.log(submit); }}
+        title='Login'
+        align={'center'} />
     );
   }
 }
