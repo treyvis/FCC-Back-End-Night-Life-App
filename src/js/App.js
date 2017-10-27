@@ -16,6 +16,7 @@ import Actions from 'grommet/components/icons/base/Actions';
 import Card from 'grommet/components/Card';
 import Tiles from 'grommet/components/Tiles';
 import Tile from 'grommet/components/Tile';
+import Search from 'grommet/components/Search';
 
 
 const locale = getCurrentLocale();
@@ -38,12 +39,18 @@ export default () => (
       <App>
         <Header>
           <Title>
-            Night Life App
+            Night Life App | Salt Lake City
           </Title>
           <Box flex={true}
             justify='end'
             direction='row'
             responsive={false}>
+            <Search inline={true}
+              fill={true}
+              size={'medium'}
+              placeHolder={'Search'}
+              suggestions={['Salt Lake City','San Francisco', 'Seatle', 'Chicago']}
+              dropAlign={{"top": "bottom"}} />
             <Menu icon={<Actions />}
               dropAlign={{ right: 'right' }}>
               <Anchor href='#'
